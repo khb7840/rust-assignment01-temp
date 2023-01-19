@@ -1,5 +1,7 @@
 // Solution comes here
 
+#[allow(dead_code, unused_variables)]
+
 pub struct Counter {
     pub a: u32,
     pub c: u32,

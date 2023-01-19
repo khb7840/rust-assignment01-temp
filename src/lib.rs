@@ -1,4 +1,3 @@
-
 // Include solution.rs
 mod solution;
 
