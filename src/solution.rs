@@ -1,5 +1,5 @@
 // Solution comes here
-pub mod solution {
+
 pub struct Counter {
     pub a: u32,
     pub c: u32,
@@ -21,14 +21,32 @@ pub fn counts<T: AsRef<[char]>>(input: T) -> Counter {
     counter
 }
 
-
-
 pub fn dna_complement<T: AsRef<[char]>>(input: T) -> Vec<char> {
-    unimplemented!();
+    let mut result = Vec::new();
+    for c in input.as_ref() {
+        match c {
+            'A' => result.push('T'),
+            'C' => result.push('G'),
+            'G' => result.push('C'),
+            'T' => result.push('A'),
+            _ => panic!("Invalid nucleotide"),
+        }
+    }
+    result
 }
 
+// reverse_rna_complement gets DNA as input and returns the reverse complement as RNA
 pub fn reverse_rna_complement<T: AsRef<[char]>>(input: T) -> Vec<char> {
-    unimplemented!();
+    let mut result = Vec::new();
+    for c in input.as_ref().iter().rev() {
+        match c {
+            'A' => result.push('U'),
+            'C' => result.push('G'),
+            'G' => result.push('C'),
+            'T' => result.push('A'),
+            _ => panic!("Invalid nucleotide"),
+        }
+    }
+    result
 }
 
-}

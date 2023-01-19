@@ -1,7 +1,7 @@
 // Write your solution to solution.rs
 // Use solution.rs for testing
 
-use super::solution::solution::*;
+use super::solution::*;
 
 #[test]
 fn test_counts_zero() {
