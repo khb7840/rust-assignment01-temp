@@ -10,7 +10,7 @@ pub struct NucleotideCounter {
 }
 
 pub fn counts<T: AsRef<[char]>>(input: T) -> NucleotideCounter {
-    let mut counter = Counter { a: 0, c: 0, g: 0, t: 0 };
+    let mut counter = NucleotideCounter { a: 0, c: 0, g: 0, t: 0 };
     for c in input.as_ref() {
         match c {
             'A' => counter.a += 1,
