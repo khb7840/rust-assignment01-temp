@@ -2,14 +2,14 @@
 
 #[allow(dead_code, unused_variables)]
 
-pub struct Counter {
-    pub a: u32,
-    pub c: u32,
-    pub g: u32,
-    pub t: u32,
+pub struct NucleotideCounter {
+    pub a: usize,
+    pub c: usize,
+    pub g: usize,
+    pub t: usize,
 }
 
-pub fn counts<T: AsRef<[char]>>(input: T) -> Counter {
+pub fn counts<T: AsRef<[char]>>(input: T) -> NucleotideCounter {
     let mut counter = Counter { a: 0, c: 0, g: 0, t: 0 };
     for c in input.as_ref() {
         match c {
